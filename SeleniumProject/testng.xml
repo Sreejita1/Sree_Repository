@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite" parallel="tests" thread-count="5">
+<listeners>
+<listener class-name="SeleniumProject.ListenerClass"></listener>
+</listeners>
+	<test name="ChromeTest">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="SeleniumProject.AssertTest" />
+
+		</classes>
+
+	</test> <!-- Test -->
+	<test name="FirefoxTest">
+		<parameter name="browser" value="Firefox" />
+		<classes>
+			<class name="SeleniumProject.AssertTest" />
+
+		</classes>
+
+	</test>
+	<test name="IE Test">
+		<parameter name="browser" value="IE" />
+		<classes>
+			<class name="SeleniumProject.AssertTest" />
+
+		</classes>
+
+	</test>
+</suite> <!-- Suite -->
